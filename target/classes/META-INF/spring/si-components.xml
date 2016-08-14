@@ -10,5 +10,8 @@
     <int:poller id="defaultPoller" default="true" max-messages-per-poll="5" fixed-rate="200" />
     <int-stream:stdout-channel-adapter id="consumer1" channel="messageChannel" append-newline="true" />
     <int-stream:stdout-channel-adapter id="consumer2" channel="messageChannel" append-newline="true" />
-    <int:publish-subscribe-channel id="messageChannel" />
+    <!--<int:publish-subscribe-channel id="messageChannel" />-->
+    <int:channel id="messageChannel">
+        <int:queue capacity="2" />
+    </int:channel>
 </beans>
