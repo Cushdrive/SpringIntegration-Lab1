@@ -8,7 +8,12 @@
        http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration.xsd
        http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream.xsd
        http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd">
-    <int-stream:stdin-channel-adapter id="producer" channel="messageChannel" />
+    <int-file:inbound-channel-adapter directory="/Users/jayson/temp/inbound"
+                                      id="producer-file-adapter"
+                                      channel="messageChannel"
+                                      prevent-duplicates="true" >
+        <int:poller fixed-rate="5000" />
+    </int-file:inbound-channel-adapter>
     <int:poller id="defaultPoller" default="true" max-messages-per-poll="5" fixed-rate="200" />
     <int-file:outbound-channel-adapter directory="file:/Users/jayson/temp" channel="messageChannel"
                                        id="consumer-file-adapter" />
