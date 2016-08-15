@@ -33,9 +33,12 @@
     <int:poller id="defaultPoller" default="true"
                 max-messages-per-poll="5" fixed-rate="200" />
 
+    <!--<int:transformer input-channel="inboundChannel"-->
+                     <!--output-channel="outboundChannel"-->
+                     <!--expression="new StringBuilder(payload).reverse().toString().toUpperCase()" />-->
     <int:transformer input-channel="inboundChannel"
                      output-channel="outboundChannel"
-                     expression="new StringBuilder(payload).reverse().toString().toUpperCase()" />
+                     ref="pigLatinTransformer" />
 
 </beans>
 
