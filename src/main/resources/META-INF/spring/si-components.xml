@@ -13,32 +13,35 @@
 	http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
 	http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Scans within the base package of the application for @Components to
-        configure as beans -->
-    <context:component-scan base-package="com.intertech.lab1" />
+    <bean id="jaxbMarshaller"
+          class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="contextPath" value="com.intertech.domain" />
+    </bean>
 
-    <!-- message producer / a Spring Integration wrapped Java Standard input
-        stream -->
-    <int-stream:stdin-channel-adapter id="producer-stream-adapter"
-                                      channel="inboundChannel" />
+    <!-- Adapter for reading files -->
+
+    <int-file:inbound-channel-adapter id="producer-file-adapter"
+                                      channel="inboundChannel" directory="/Users/jayson/temp/input"
+                                      prevent-duplicates="true">
+        <int:poller fixed-rate="5000" />
+    </int-file:inbound-channel-adapter>
 
     <int:channel id="inboundChannel" />
+
+    <int-file:file-to-string-transformer
+            id="file-2-string-transformer" input-channel="inboundChannel"
+            output-channel="xml-inboundChannel" charset="UTF-8" />
+
+    <int:channel id="xml-inboundChannel" />
 
 
     <int:channel id="outboundChannel" />
 
-    <int-stream:stdout-channel-adapter
-            id="consumer-stream-adapter" channel="outboundChannel" append-newline="true" />
+    <int-xml:unmarshalling-transformer unmarshaller="jaxbMarshaller" id="xml-2-object-transformer"
+                                       input-channel="xml-inboundChannel" output-channel="outboundChannel" />
 
-    <int:poller id="defaultPoller" default="true"
-                max-messages-per-poll="5" fixed-rate="200" />
-
-    <!--<int:transformer input-channel="inboundChannel"-->
-                     <!--output-channel="outboundChannel"-->
-                     <!--expression="new StringBuilder(payload).reverse().toString().toUpperCase()" />-->
-    <int:transformer input-channel="inboundChannel"
-                     output-channel="outboundChannel"
-                     ref="pigLatinTransformer" />
-
+    <int:service-activator id="printing-service-activator"
+                           input-channel="outboundChannel" ref="serviceActivator" />
+    <bean id="serviceActivator" class="com.intertech.lab1.ExampleServiceActivator" />
 </beans>
 
