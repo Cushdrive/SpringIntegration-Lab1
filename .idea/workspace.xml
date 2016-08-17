@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35d2be4d-bd0d-46e7-bc28-da5462bc90af" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/intertech/domain/ObjectFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/intertech/domain/Shiporder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/intertech/domain/shiporder.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intertech/domain/ObjectFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intertech/domain/Shiporder$Item.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intertech/domain/Shiporder$Shipto.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/intertech/domain/Shiporder.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/intertech/lab1/ShipOrderEnricher.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring/si-components.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring/si-components.xml" />
@@ -55,36 +49,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="si-components.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="si-components.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16867469">
-              <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
+            <state vertical-scroll-proportion="-27.791666">
+              <caret line="53" column="53" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringIntegration/appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShipOrderEnricher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/intertech/lab1/ShipOrderEnricher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpringIntegration/appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components" pinned="false" current-in-tab="true">
         <entry file="uml://SpringIntegration/appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>SpringIntegration</ID>
               <OriginalElement>appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components</OriginalElement>
               <nodes>
-                <node x="783.4398809523809" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel</node>
+                <node x="931.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher</node>
                 <node x="152.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=inboundChannel</node>
+                <node x="1285.939880952381" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator</node>
                 <node x="0.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=producer-file-adapter</node>
-                <node x="783.4398809523809" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel</node>
-                <node x="935.4398809523809" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340</node>
-                <node x="1105.3797619047618" y="-258.765873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel</node>
-                <node x="613.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter</node>
+                <node x="623.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer</node>
                 <node x="304.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=file-2-string-transformer</node>
-                <node x="1257.3797619047618" y="-258.765873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+                <node x="1285.939880952381" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+                <node x="1101.439880952381" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel</node>
+                <node x="779.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel</node>
                 <node x="461.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel</node>
-                <node x="935.4398809523809" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter2</node>
-                <node x="1257.3797619047618" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter1</node>
-                <node x="1105.3797619047618" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel</node>
+                <node x="1101.439880952381" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel</node>
               </nodes>
               <notes />
               <edges>
@@ -92,7 +96,7 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
@@ -100,27 +104,19 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter2">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
@@ -128,18 +124,28 @@
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter1">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
-                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator">
+                <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator">
                   <point x="0.0" y="0.0" />
                   <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="207.0" y="-81.0" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="970.0" y="-56.5" />
               <SelectedNodes>
-                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=file-2-string-transformer</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=inboundChannel</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=producer-file-adapter</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel</node>
+                <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer</node>
               </SelectedNodes>
               <Categories>
                 <Category>Show Labels</Category>
@@ -212,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/intertech/lab1/PigLatinTransformer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/intertech/lab1/ExampleServiceActivator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/intertech/domain/Shiporder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/intertech/lab1/ShipOrderEnricher.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml" />
       </list>
     </option>
@@ -428,7 +435,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="intertech" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spring_Integration_Lab_1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lab1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="intertech" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1095,12 +1132,12 @@
       <created>1471189364120</created>
       <option name="number" value="Default" />
       <updated>1471189364120</updated>
-      <workItem from="1471189365393" duration="18522000" />
+      <workItem from="1471189365393" duration="20330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18522000" />
+    <option name="totallyTimeSpent" value="20330000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1113,7 +1150,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892805" sideWeight="0.503231" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31424376" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31864905" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -1198,25 +1235,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.791666">
+          <caret line="53" column="53" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/intertech/lab1/ShipOrderEnricher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="uml://SpringIntegration/appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
           <ID>SpringIntegration</ID>
           <OriginalElement>appContextPath=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;appContextName=si-components</OriginalElement>
           <nodes>
-            <node x="783.4398809523809" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel</node>
+            <node x="931.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher</node>
             <node x="152.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=inboundChannel</node>
+            <node x="1285.939880952381" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator</node>
             <node x="0.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=producer-file-adapter</node>
-            <node x="783.4398809523809" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel</node>
-            <node x="935.4398809523809" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340</node>
-            <node x="1105.3797619047618" y="-258.765873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel</node>
-            <node x="613.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter</node>
+            <node x="623.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer</node>
             <node x="304.0" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=file-2-string-transformer</node>
-            <node x="1257.3797619047618" y="-258.765873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+            <node x="1285.939880952381" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+            <node x="1101.439880952381" y="-238.265873015873">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel</node>
+            <node x="779.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel</node>
             <node x="461.5" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel</node>
-            <node x="935.4398809523809" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter2</node>
-            <node x="1257.3797619047618" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter1</node>
-            <node x="1105.3797619047618" y="-124.6329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel</node>
+            <node x="1101.439880952381" y="-104.1329365079365">module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel</node>
           </nodes>
           <notes />
           <edges>
@@ -1224,7 +1277,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1232,27 +1285,19 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter2">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=usaChannel">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;tag=int:recipient-list-router;offset=2340" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -1260,30 +1305,32 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwayFileChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=consumer-file-adapter1">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=norwaySAChannel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator">
+            <edge source="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel" target="module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="207.0" y="-81.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="970.0" y="-56.5" />
           <SelectedNodes>
-            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=orderTypeRouter</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=file-2-string-transformer</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=printing-service-activator</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=total-price-enricher-channel</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=ship-order-enricher</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=shipOrder-Channel</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=xml-inboundChannel</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=inboundChannel</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=enriching-service-activator</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=producer-file-adapter</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_class=org.springframework.integration.channel.DirectChannel;bean_name=outboundChannel</node>
+            <node>module=Spring_Integration_Lab_1;fileset=fileset;context=/Users/jayson/Tutorial_Workspaces/Java_Tuts/SpringIntegration/ExpressSpringIntegration/lab1/src/main/resources/META-INF/spring/si-components.xml;bean_name=xml-2-object-transformer</node>
           </SelectedNodes>
           <Categories>
             <Category>Show Labels</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/spring/si-components.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16867469">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>

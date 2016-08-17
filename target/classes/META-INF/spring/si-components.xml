@@ -13,9 +13,16 @@
 	http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
 	http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="com.intertech.lab1.ExampleServiceActivator" id="serviceActivator" />
+    <bean id="shipOrderEnricher" class="com.intertech.lab1.ShipOrderEnricher" />
 
-    <int:service-activator id="printing-service-activator" input-channel="norwaySAChannel" ref="serviceActivator" />
+    <int:channel id="total-price-enricher-channel" />
+
+
+    <int-file:inbound-channel-adapter id="producer-file-adapter"
+                                      channel="inboundChannel" directory="/Users/jayson/temp/input"
+                                      prevent-duplicates="true">
+        <int:poller fixed-rate="5000" />
+    </int-file:inbound-channel-adapter>
 
     <int:channel id="inboundChannel" />
 
@@ -23,36 +30,34 @@
             id="file-2-string-transformer" input-channel="inboundChannel"
             output-channel="xml-inboundChannel" charset="UTF-8" />
 
-    <int:channel id="norwayChannel" />
-    <int:channel id="usaChannel" />
-    <int:channel id="norwayFileChannel" />
-    <int:channel id="norwaySAChannel" />
-
-    <int-file:outbound-channel-adapter channel="norwayFileChannel"
-                                       id="consumer-file-adapter1" directory="/Users/jayson/temp/Norway" />
-
-    <int-file:outbound-channel-adapter channel="usaChannel"
-                                       id="consumer-file-adapter2" directory="/Users/jayson/temp/USA" />
-
-    <int:recipient-list-router input-channel="norwayChannel">
-        <int:recipient channel="norwayFileChannel"/>
-        <int:recipient channel="norwaySAChannel" />
-    </int:recipient-list-router>
-
-    <int-xml:xpath-router id="orderTypeRouter"
-                          input-channel="xml-inboundChannel" >
-        <int-xml:xpath-expression expression="/shiporder/shipto/country" />
-            <int-xml:mapping value="Norway" channel="norwayChannel" />
-            <int-xml:mapping value="USA" channel="usaChannel" />
-    </int-xml:xpath-router>
-
-    <int-file:inbound-channel-adapter id="producer-file-adapter"
-                                      channel="inboundChannel" directory="/Users/jayson/temp/input"
-                                      prevent-duplicates="true" >
-        <int:poller fixed-delay="5000" />
-    </int-file:inbound-channel-adapter>
-
     <int:channel id="xml-inboundChannel" />
+
+    <int-xml:unmarshalling-transformer
+            id="xml-2-object-transformer" input-channel="xml-inboundChannel"
+            output-channel="shipOrder-Channel" unmarshaller="jaxbMarshaller" />
+
+    <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="contextPath" value="com.intertech.domain" />
+    </bean>
+
+    <int:channel id="shipOrder-Channel" />
+
+
+
+    <int:channel id="outboundChannel" />
+
+    <int:service-activator id="printing-service-activator"
+                           input-channel="outboundChannel" ref="serviceActivator" />
+    <bean id="serviceActivator" class="com.intertech.lab1.ExampleServiceActivator" />
+
+    <int:enricher input-channel="shipOrder-Channel" id="ship-order-enricher" output-channel="outboundChannel"
+        request-channel="total-price-enricher-channel">
+        <int:property name="orderTotal" expression="payload" />
+        <int:property name="shipped" expression="true" />
+    </int:enricher>
+
+    <int:service-activator id="enriching-service-activator" ref="shipOrderEnricher"
+                           input-channel="total-price-enricher-channel" />
 
 </beans>
 
