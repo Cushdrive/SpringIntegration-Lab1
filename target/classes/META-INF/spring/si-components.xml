@@ -13,13 +13,18 @@
 	http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file.xsd
 	http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="shipOrderEnricher" class="com.intertech.lab1.ShipOrderEnricher" />
+    <!-- Adapter for reading files -->
 
-    <int:channel id="total-price-enricher-channel" />
+    <int:channel id="revenueProcessingChannel" />
 
+    <bean id="revenueServiceBean" class="com.intertech.lab1.RevenueServiceActivator" />
+
+    <int:service-activator ref="revenueServiceBean"
+                           input-channel="revenueProcessingChannel"
+                           output-channel="outboundChannel" />
 
     <int-file:inbound-channel-adapter id="producer-file-adapter"
-                                      channel="inboundChannel" directory="/Users/jayson/temp/input"
+                                      channel="inboundChannel" directory="/Users/jayson/temp/inbound"
                                       prevent-duplicates="true">
         <int:poller fixed-rate="5000" />
     </int-file:inbound-channel-adapter>
@@ -34,30 +39,28 @@
 
     <int-xml:unmarshalling-transformer
             id="xml-2-object-transformer" input-channel="xml-inboundChannel"
-            output-channel="shipOrder-Channel" unmarshaller="jaxbMarshaller" />
+            output-channel="revenueProcessingChannel" unmarshaller="jaxbMarshaller" />
 
     <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="contextPath" value="com.intertech.domain" />
     </bean>
 
-    <int:channel id="shipOrder-Channel" />
-
-
-
     <int:channel id="outboundChannel" />
 
-    <int:service-activator id="printing-service-activator"
-                           input-channel="outboundChannel" ref="serviceActivator" />
-    <bean id="serviceActivator" class="com.intertech.lab1.ExampleServiceActivator" />
+    <int-xml:marshalling-transformer id="object-2-xml-transformer"
+                                     input-channel="outboundChannel" output-channel="xml-outboundChannel"
+                                     marshaller="jaxbMarshaller" result-type="StringResult" />
 
-    <int:enricher input-channel="shipOrder-Channel" id="ship-order-enricher" output-channel="outboundChannel"
-        request-channel="total-price-enricher-channel">
-        <int:property name="orderTotal" expression="payload" />
-        <int:property name="shipped" expression="true" />
-    </int:enricher>
+    <int:channel id="xml-outboundChannel" />
 
-    <int:service-activator id="enriching-service-activator" ref="shipOrderEnricher"
-                           input-channel="total-price-enricher-channel" />
+    <int:object-to-string-transformer id="xml-to-string-transformer"
+                                      input-channel="xml-outboundChannel" output-channel="string-outboundChannel" />
+
+    <int:channel id="string-outboundChannel" />
+
+    <int-file:outbound-channel-adapter
+            channel="string-outboundChannel" id="consumer-file-adapter"
+            directory="/Users/jayson/temp" auto-create-directory="true" />
 
 </beans>
 
